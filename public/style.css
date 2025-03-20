@@ -1,0 +1,310 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: url('fundo_painel.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #303030;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f0f4fa; /* fundo translúcido */
+    backdrop-filter: blur(4px); /* opcional: leve desfoque */
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin-top: 40px;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #303030;
+    font-size: 28px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .areaRanking {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 60px;
+    width: 100%;
+  }
+  
+  .podio {
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+    justify-content: center;
+    width: 600px;
+  }
+  
+  .coluna-top {
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .lugar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 140px;
+    text-align: center;
+  
+    /* Destaques visuais do pódio */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    padding: 10px;
+    border-radius: 12px;
+    position: relative;
+  }
+  
+  .lugar:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Medalhas com ::before */
+  .lugar.primeiro::before {
+    content: "🥇";
+    font-size: 26px;
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .lugar.segundo::before {
+    content: "🥈";
+    font-size: 26px;
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .lugar.terceiro::before {
+    content: "🥉";
+    font-size: 26px;
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Fundo suave e bordas por posição */
+  .lugar.primeiro {
+    background-color: rgba(255, 215, 0, 0.15);
+    border: 2px solid gold;
+    box-shadow: 0 0 12px rgba(255, 215, 0, 0.4);
+  }
+  
+  .lugar.segundo {
+    background-color: rgba(192, 192, 192, 0.12);
+    border: 2px solid silver;
+  }
+  
+  .lugar.terceiro {
+    background-color: rgba(205, 127, 50, 0.12);
+    border: 2px solid #cd7f32;
+  }
+  
+  .barra {
+    width: 100%;
+    border-radius: 6px 6px 0 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    padding-top: 6px;
+    transition: height 0.3s ease;
+  }
+  
+  .lugar.primeiro .barra {
+    background-color: gold;
+  }
+  
+  .lugar.segundo .barra {
+    background-color: silver;
+  }
+  
+  .lugar.terceiro .barra {
+    background-color: #cd7f32;
+  }
+  
+  /* Nome e valor com cor do pódio */
+  
+  /*.lugar.primeiro .nomeEquipe,
+  .lugar.primeiro .valorEquipe {
+    color: gold;
+  }*/
+  
+  /*.lugar.segundo .nomeEquipe,
+  .lugar.segundo .valorEquipe {
+    color: silver;
+  }*/
+  
+  /*.lugar.terceiro .nomeEquipe,
+  .lugar.terceiro .valorEquipe {
+    color: #cd7f32; /* bronze */
+  /*}*/
+  
+  
+  .nomeEquipe {
+    margin-top: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .valorEquipe {
+    margin-top: 8px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #222;
+    text-align: center;
+  }
+  
+  .topDez {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .topDez li {
+    display: flex;
+    background: #e3e3e3;
+    border-left: 4px solid #066eea;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 17px;
+    font-weight: bold;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .topDez li span:nth-child(1) {
+    width: 40px;
+    text-align: left;
+  }
+  
+  .topDez li span:nth-child(2) {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .topDez li span:nth-child(3) {
+    width: 130px;
+    text-align: right;
+  }
+  
+  /* Responsivo */
+  @media screen and (max-width: 768px) {
+    .areaRanking {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .podio {
+      width: 100%;
+      justify-content: center;
+    }
+  
+    .coluna-top {
+      width: 100%;
+      margin-top: 20px;
+    }
+  
+    .lugar {
+      width: 100px;
+    }
+  }
+  
+  .lugar.destacado {
+    transform: scale(1.08);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  @keyframes brilhoLider {
+    0%   { box-shadow: 0 0 12px gold; }
+    50%  { box-shadow: 0 0 24px gold; }
+    100% { box-shadow: 0 0 12px gold; }
+  }
+  
+  .lugar.primeiro.destacado {
+    animation: brilhoLider 1.2s infinite;
+  }
+  
+  .lugar.primeiro::after {
+    content: "👑";
+    font-size: 28px;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: coroaBalanço 2s infinite ease-in-out, brilhoCoroa 1.5s infinite;
+  }
+  
+  @keyframes coroaBalanço {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50%      { transform: translateX(-50%) translateY(-5px); }
+  }
+  
+  @keyframes brilhoCoroa {
+    0%, 100% {
+      text-shadow: 0 0 4px gold, 0 0 8px gold;
+    }
+    50% {
+      text-shadow: 0 0 10px gold, 0 0 18px gold;
+    }
+  }
+  
+  .logo-vieiracred {
+    margin-bottom: 10px;
+    margin-top: -30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 180px;
+    height: auto;
+    animation: logoFadeUp 1s ease-in-out;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Animação ao carregar */
+  @keyframes logoFadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
