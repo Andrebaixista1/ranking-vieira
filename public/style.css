@@ -86,27 +86,27 @@ body {
   /* Medalhas com ::before */
   .lugar.primeiro::before {
     content: "🥇";
-    font-size: 26px;
+    font-size: 34px;
     position: absolute;
-    top: -18px;
+    top: -22px;
     left: 50%;
     transform: translateX(-50%);
   }
   
   .lugar.segundo::before {
     content: "🥈";
-    font-size: 26px;
+    font-size: 34px;
     position: absolute;
-    top: -18px;
+    top: -22px;
     left: 50%;
     transform: translateX(-50%);
   }
   
   .lugar.terceiro::before {
     content: "🥉";
-    font-size: 26px;
+    font-size: 34px;
     position: absolute;
-    top: -18px;
+    top: -22px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -114,18 +114,18 @@ body {
   /* Fundo suave e bordas por posição */
   .lugar.primeiro {
     background-color: rgba(255, 215, 0, 0.15);
-    border: 2px solid gold;
+    border: 2px solid #303030;
     box-shadow: 0 0 12px rgba(255, 215, 0, 0.4);
   }
   
   .lugar.segundo {
     background-color: rgba(192, 192, 192, 0.12);
-    border: 2px solid silver;
+    border: 2px solid #303030;
   }
   
   .lugar.terceiro {
     background-color: rgba(205, 127, 50, 0.12);
-    border: 2px solid #cd7f32;
+    border: 2px solid #303030;
   }
   
   .barra {
@@ -141,15 +141,15 @@ body {
   }
   
   .lugar.primeiro .barra {
-    background-color: gold;
+    background-color: #066eea;
   }
   
   .lugar.segundo .barra {
-    background-color: silver;
+    background-color: #066eea;
   }
   
   .lugar.terceiro .barra {
-    background-color: #cd7f32;
+    background-color: #066eea;
   }
   
   /* Nome e valor com cor do pódio */
@@ -252,9 +252,9 @@ body {
   }
   
   @keyframes brilhoLider {
-    0%   { box-shadow: 0 0 12px gold; }
-    50%  { box-shadow: 0 0 24px gold; }
-    100% { box-shadow: 0 0 12px gold; }
+    0%   { box-shadow: 0 0 12px #066eea; }
+    50%  { box-shadow: 0 0 24px #066eea; }
+    100% { box-shadow: 0 0 12px #066eea; }
   }
   
   .lugar.primeiro.destacado {

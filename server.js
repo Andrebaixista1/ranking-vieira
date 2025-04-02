@@ -84,6 +84,6 @@ app.get('/api/ranking', (req, res) => {
     });
 });
 
-app.listen(port, () => {
-    console.log(`Servidor rodando em http://localhost:${port}`);
+app.listen(port, '26.56.176.12', () => {
+    console.log(`Servidor rodando em http://26.56.176.12:${port}`);
 });
