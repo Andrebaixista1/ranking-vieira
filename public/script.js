@@ -1,5 +1,5 @@
 let intervaloPodio;
-const API_BASE_URL = 'http://26.87.3.24:3010'; // URL base do seu backend
+const API_BASE_URL = 'https://api-ranking-vieira.vercel.app/'; // URL base do seu backend
 
 // Elemento de loading
 function createLoader() {
