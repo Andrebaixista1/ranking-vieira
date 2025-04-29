@@ -28,7 +28,7 @@ const pool = mysql.createPool({
 });
 
 // Rota correta para obter o ranking
-app.get('/api/ranking', async (req, res) => {
+app.get('https://api-ranking-vieira.vercel.app/api/ranking', async (req, res) => {
     try {
         const dataAtual = new Date().toISOString().split('T')[0] + '%';
 
